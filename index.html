@@ -2,7 +2,6 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Đăng nhập</title>
 
 <style>
@@ -15,12 +14,20 @@ align-items:center;
 height:100vh;
 margin:0;
 font-family:sans-serif;
-overflow:hidden;
 }
 
 .container{
-position:relative;
+width:350px;
 text-align:center;
+}
+
+/* phần avatar + chữ */
+
+.top{
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:30px;
 }
 
 /* avatar */
@@ -30,7 +37,6 @@ width:120px;
 height:120px;
 border-radius:10px;
 object-fit:cover;
-position:relative;
 
 animation: moveAvatar 2s forwards;
 }
@@ -38,14 +44,10 @@ animation: moveAvatar 2s forwards;
 /* chữ */
 
 .title{
-position:absolute;
-left:140px;
-top:30px;
 font-size:26px;
 font-weight:bold;
 color:#b000b5;
-letter-spacing:2px;
-text-transform:uppercase;
+margin-left:20px;
 
 opacity:0;
 animation: showText 2s forwards;
@@ -55,17 +57,16 @@ animation-delay:1.5s;
 /* box */
 
 .box{
-margin-top:40px;
 background:#f3e9f2;
 padding:25px;
 border-radius:15px;
 width:280px;
+margin:auto;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 
-animation: slideUp 1.5s ease;
-animation-delay:2.5s;
 opacity:0;
-animation-fill-mode:forwards;
+animation: slideUp 1.5s forwards;
+animation-delay:2.5s;
 }
 
 input{
@@ -88,50 +89,41 @@ font-size:16px;
 cursor:pointer;
 }
 
-/* animation avatar trượt */
+/* animation avatar */
 
 @keyframes moveAvatar{
-
 0%{
+transform:translateX(60px);
+}
+100%{
 transform:translateX(0);
 }
-
-100%{
-transform:translateX(-80px);
-}
-
 }
 
 /* chữ hiện */
 
 @keyframes showText{
-
 0%{
 opacity:0;
 transform:translateX(30px);
 }
-
 100%{
 opacity:1;
 transform:translateX(0);
 }
-
 }
 
-/* box trượt lên */
+/* box trượt */
 
 @keyframes slideUp{
-
 0%{
 opacity:0;
 transform:translateY(60px);
 }
-
 100%{
 opacity:1;
 transform:translateY(0);
 }
-
 }
 
 </style>
@@ -141,10 +133,9 @@ transform:translateY(0);
 
 <div class="container">
 
+<div class="top">
 <img class="avatar" src="avatar.jpg">
-
-<div class="title">
-CHÚC CÁC VỢ 8/3 VUI VẺ
+<div class="title">CHÚC CÁC VỢ 8/3 VUI VẺ</div>
 </div>
 
 <div class="box">
@@ -161,7 +152,6 @@ CHÚC CÁC VỢ 8/3 VUI VẺ
 <script>
 
 function login(){
-
 var p=document.getElementById("pass").value;
 
 if(p==="yeuem"){
@@ -173,10 +163,9 @@ window.location.href="page2.html";
 else{
 alert("Sai mật khẩu");
 }
-
 }
 
 </script>
 
 </body>
-  </html>
+</html>
