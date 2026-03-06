@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng nhập</title>
+
+<style>
+
+body{
+background:#d8a9d6;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+font-family:sans-serif;
+}
+
+.container{
+text-align:center;
+}
+
+.avatar{
+width:120px;
+height:120px;
+border-radius:10px;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+h1{
+color:#b000b5;
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+.box{
+background:#f3e9f2;
+padding:25px;
+border-radius:15px;
+width:280px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:8px;
+border:1px solid #444;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#e3b6e5;
+font-weight:bold;
+font-size:16px;
+}
+
+<link rel="stylesheet" href="style.css">
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img class="avatar" src="avatar.jpg">
+
+<h1>ĐĂNG NHẬP</h1>
+
+<div class="box">
+
+<input type="text" placeholder="Tên">
+<input type="password" id="pass" placeholder="Mật khẩu">
+
+<button onclick="login()">XÁC NHẬN</button>
+
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+var p=document.getElementById("pass").value;
+
+if(p==="yeuem"){
+window.location.href="page1.html";
+}
+else if(p==="voanh"){
+window.location.href="page2.html";
+}
+else{
+alert("Sai mật khẩu");
+}
+
+}
+
+</script>
+
+</body>
+</html>

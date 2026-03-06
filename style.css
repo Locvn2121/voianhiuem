@@ -1,0 +1,91 @@
+body{
+background:#d8a9d6;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+font-family:sans-serif;
+}
+
+/* khung chính */
+
+.container{
+text-align:center;
+animation:fadeIn 1.5s ease;
+}
+
+/* avatar */
+
+.avatar{
+width:120px;
+height:120px;
+border-radius:10px;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+/* tiêu đề */
+
+h1{
+color:#b000b5;
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+/* box đăng nhập */
+
+.box{
+background:#f3e9f2;
+padding:25px;
+border-radius:15px;
+width:280px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+animation:slideUp 1s ease;
+}
+
+/* input */
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:8px;
+border:1px solid #444;
+font-size:16px;
+}
+
+/* button */
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#e3b6e5;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+/* animation */
+
+@keyframes fadeIn{
+0%{
+opacity:0;
+}
+100%{
+opacity:1;
+}
+}
+
+@keyframes slideUp{
+0%{
+transform:translateY(40px);
+opacity:0;
+}
+100%{
+transform:translateY(0);
+opacity:1;
+}
+}
