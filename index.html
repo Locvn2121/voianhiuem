@@ -45,7 +45,8 @@ width:70px;
 height:70px;
 border-radius:15px;
 object-fit:cover;
-}
+animation: avatarAni 1.5s ease;
+  }
 
 /* chữ chúc */
 
@@ -54,8 +55,8 @@ font-family:'Pacifico',cursive;
 font-size:28px;
 color:#a000a8;
 text-align:left;
-}
-
+animation: textAni 1.5s ease;
+  }
 /* chữ đăng nhập */
 
 .login-title{
@@ -71,6 +72,7 @@ background:#e9dbe7;
 padding:20px;
 border-radius:15px;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
+animation: boxAni 1.5s ease;
 }
 
 /* input */
@@ -101,6 +103,38 @@ button:hover{
 background:#b788b3;
 }
 
+  @keyframes avatarAni{
+0%{
+opacity:0;
+transform:scale(0.6);
+}
+100%{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@keyframes textAni{
+0%{
+opacity:0;
+transform:translateX(-40px);
+}
+100%{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+@keyframes boxAni{
+0%{
+opacity:0;
+transform:translateY(50px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+  }
 </style>
 </head>
 
