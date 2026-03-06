@@ -1,91 +1,41 @@
 body{
-background:#d8a9d6;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
-font-family:sans-serif;
+    margin:0;
+    padding:0;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, sans-serif;
 }
 
-/* khung chính */
-
-.container{
-text-align:center;
-animation:fadeIn 1.5s ease;
+/* chữ chính */
+.title{
+    font-size:60px;
+    color:white;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    animation: fadeIn 2s ease forwards, glow 2s infinite alternate;
 }
 
-/* avatar */
-
-.avatar{
-width:120px;
-height:120px;
-border-radius:10px;
-object-fit:cover;
-margin-bottom:20px;
-}
-
-/* tiêu đề */
-
-h1{
-color:#b000b5;
-letter-spacing:3px;
-margin-bottom:20px;
-}
-
-/* box đăng nhập */
-
-.box{
-background:#f3e9f2;
-padding:25px;
-border-radius:15px;
-width:280px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-animation:slideUp 1s ease;
-}
-
-/* input */
-
-input{
-width:100%;
-padding:12px;
-margin-bottom:12px;
-border-radius:8px;
-border:1px solid #444;
-font-size:16px;
-}
-
-/* button */
-
-button{
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-background:#e3b6e5;
-font-weight:bold;
-font-size:16px;
-cursor:pointer;
-}
-
-/* animation */
-
+/* animation hiện chữ */
 @keyframes fadeIn{
-0%{
-opacity:0;
-}
-100%{
-opacity:1;
-}
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-@keyframes slideUp{
-0%{
-transform:translateY(40px);
-opacity:0;
-}
-100%{
-transform:translateY(0);
-opacity:1;
-}
+/* hiệu ứng phát sáng */
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff,0 0 20px #ff00ff,0 0 30px #ff00ff;
+    }
+    to{
+        text-shadow:0 0 20px #fff,0 0 40px #00ffff,0 0 60px #00ffff;
+    }
 }
