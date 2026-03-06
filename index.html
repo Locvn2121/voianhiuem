@@ -2,128 +2,103 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Đăng nhập</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-background:#d8a9d6;
+background:#cfa2cc;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
 margin:0;
-font-family:sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
+/* container */
+
 .container{
-width:350px;
+width:90%;
+max-width:350px;
 text-align:center;
 }
 
-/* phần avatar + chữ */
+/* avatar + chữ */
 
 .top{
 display:flex;
 align-items:center;
 justify-content:center;
-margin-bottom:30px;
+gap:15px;
+margin-bottom:25px;
 }
 
 /* avatar */
 
 .avatar{
-width:120px;
-height:120px;
-border-radius:10px;
+width:70px;
+height:70px;
+border-radius:15px;
 object-fit:cover;
-
-animation: moveAvatar 2s forwards;
 }
 
-/* chữ */
+/* chữ chúc */
 
 .title{
-font-size:26px;
-font-weight:bold;
-color:#b000b5;
-margin-left:20px;
+font-family:'Pacifico',cursive;
+font-size:22px;
+color:#a000a8;
+text-align:left;
+}
 
-opacity:0;
-animation: showText 2s forwards;
-animation-delay:1.5s;
+/* chữ đăng nhập */
+
+.login-title{
+font-size:20px;
+font-weight:600;
+margin-bottom:15px;
 }
 
 /* box */
 
 .box{
-background:#f3e9f2;
-padding:25px;
+background:#e9dbe7;
+padding:20px;
 border-radius:15px;
-width:280px;
-margin:auto;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-
-opacity:0;
-animation: slideUp 1.5s forwards;
-animation-delay:2.5s;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
+
+/* input */
 
 input{
 width:100%;
 padding:12px;
 margin-bottom:12px;
 border-radius:8px;
-border:1px solid #444;
-font-size:16px;
+border:1px solid #777;
+font-size:15px;
 }
+
+/* button */
 
 button{
 width:100%;
 padding:12px;
 border:none;
 border-radius:10px;
-background:#e3b6e5;
+background:#caa0c7;
 font-weight:bold;
-font-size:16px;
+font-size:15px;
 cursor:pointer;
 }
 
-/* animation avatar */
-
-@keyframes moveAvatar{
-0%{
-transform:translateX(60px);
-}
-100%{
-transform:translateX(0);
-}
-}
-
-/* chữ hiện */
-
-@keyframes showText{
-0%{
-opacity:0;
-transform:translateX(30px);
-}
-100%{
-opacity:1;
-transform:translateX(0);
-}
-}
-
-/* box trượt */
-
-@keyframes slideUp{
-0%{
-opacity:0;
-transform:translateY(60px);
-}
-100%{
-opacity:1;
-transform:translateY(0);
-}
+button:hover{
+background:#b788b3;
 }
 
 </style>
@@ -135,10 +110,17 @@ transform:translateY(0);
 
 <div class="top">
 <img class="avatar" src="avatar.jpg">
-<div class="title">CHÚC CÁC VỢ 8/3 VUI VẺ</div>
+
+<div class="title">
+Chúc các vợ<br>8/3 vui vẻ
+</div>
 </div>
 
 <div class="box">
+
+<div class="login-title">
+ĐĂNG NHẬP
+</div>
 
 <input type="text" placeholder="Tên">
 <input type="password" id="pass" placeholder="Mật khẩu">
@@ -152,6 +134,7 @@ transform:translateY(0);
 <script>
 
 function login(){
+
 var p=document.getElementById("pass").value;
 
 if(p==="yeuem"){
@@ -163,6 +146,7 @@ window.location.href="page2.html";
 else{
 alert("Sai mật khẩu");
 }
+
 }
 
 </script>
