@@ -1,110 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Đăng nhập</title>
+<title>8/3</title>
 
 <style>
 
 body{
-background:#d8a9d6;
+margin:0;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-margin:0;
-font-family:sans-serif;
+background:#ffd6e7;
+font-family:Arial;
+overflow:hidden;
 }
 
-.container{
-text-align:center;
+/* trái tim */
+.heart{
+position:absolute;
+font-size:120px;
+opacity:0;
+animation:heartShow 2s forwards;
 }
 
-.avatar{
-width:120px;
-height:120px;
-border-radius:10px;
-object-fit:cover;
-margin-bottom:20px;
+/* chữ */
+.text{
+position:absolute;
+top:40%;
+font-size:40px;
+font-weight:bold;
+color:#ff2e63;
+opacity:0;
+animation:textShow 2s forwards;
+animation-delay:2s;
 }
 
-h1{
-color:#b000b5;
-letter-spacing:3px;
-margin-bottom:20px;
-}
-
-.box{
-background:#f3e9f2;
-padding:25px;
-border-radius:15px;
-width:280px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+/* ô nhập */
+.login{
+position:absolute;
+top:60%;
+opacity:0;
+animation:loginShow 2s forwards;
+animation-delay:3s;
 }
 
 input{
-width:100%;
-padding:12px;
-margin-bottom:12px;
-border-radius:8px;
-border:1px solid #444;
-font-size:16px;
+padding:10px;
+border-radius:10px;
+border:none;
+outline:none;
 }
 
 button{
-width:100%;
-padding:12px;
+padding:10px 15px;
 border:none;
 border-radius:10px;
-background:#e3b6e5;
-font-weight:bold;
-font-size:16px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
 }
 
-<link rel="stylesheet" href="style.css">
+/* animation */
+
+@keyframes heartShow{
+0%{
+opacity:0;
+transform:translateY(50px) scale(0.5);
+}
+50%{
+opacity:1;
+transform:scale(1.2);
+}
+100%{
+opacity:0;
+transform:translateY(-150px) scale(0.8);
+}
+}
+
+@keyframes textShow{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes loginShow{
+0%{
+opacity:0;
+}
+100%{
+opacity:1;
+}
+}
 
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="heart">❤️</div>
 
-<img class="avatar" src="avatar.jpg">
-
-<h1>ĐĂNG NHẬP</h1>
-
-<div class="box">
-
-<input type="text" placeholder="Tên">
-<input type="password" id="pass" placeholder="Mật khẩu">
-
-<button onclick="login()">XÁC NHẬN</button>
-
+<div class="text">
+8/3 VUI NHA VỢ
 </div>
 
+<div class="login">
+<input type="password" placeholder="Nhập mật khẩu">
+<button>Vào</button>
 </div>
 
-<script>
-
-function login(){
-
-var p=document.getElementById("pass").value;
-
-if(p==="yeuem"){
-window.location.href="page1.html";
-}
-else if(p==="voanh"){
-window.location.href="page2.html";
-}
-else{
-alert("Sai mật khẩu");
-}
-
-}
-
+</body>
+</html>
 </script>
 
 </body>
