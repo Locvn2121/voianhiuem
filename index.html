@@ -122,7 +122,7 @@ Chúc các vợ<br>8/3 vui vẻ nha
 ĐĂNG NHẬP
 </div>
 
-<input type="text" placeholder="Tên">
+<input type="text" id="user" placeholder="Tên">
 <input type="password" id="pass" placeholder="Mật khẩu">
 
 <button onclick="login()">XÁC NHẬN</button>
@@ -135,16 +135,17 @@ Chúc các vợ<br>8/3 vui vẻ nha
 
 function login(){
 
+var u=document.getElementById("user").value;
 var p=document.getElementById("pass").value;
 
-if(p==="1812209"){
+if(u==="Mai Ân" && p==="02012012"){
 window.location.href="page1.html";
 }
-else if(p==="02012012"){
+else if(u==="Kim Anh" && p==="18122009"){
 window.location.href="page2.html";
 }
 else{
-alert("Sai mật khẩu");
+alert("Sai tên hoặc mật khẩu");
 }
 
 }
