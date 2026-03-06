@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Đăng nhập</title>
-<link rel="stylesheet" href="style.css">
+
 <style>
 
 body{
@@ -22,12 +21,15 @@ font-family:sans-serif;
 text-align:center;
 }
 
+/* avatar */
 .avatar{
 width:120px;
 height:120px;
 border-radius:10px;
 object-fit:cover;
 margin-bottom:20px;
+
+animation: fadeIn 2s ease;
 }
 
 h1{
@@ -36,12 +38,15 @@ letter-spacing:3px;
 margin-bottom:20px;
 }
 
+/* box đăng nhập */
 .box{
 background:#f3e9f2;
 padding:25px;
 border-radius:15px;
 width:280px;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+animation: slideUp 1.2s ease;
 }
 
 input{
@@ -61,6 +66,33 @@ border-radius:10px;
 background:#e3b6e5;
 font-weight:bold;
 font-size:16px;
+cursor:pointer;
+}
+
+/* animation avatar */
+
+@keyframes fadeIn{
+0%{
+opacity:0;
+transform:scale(0.6);
+}
+100%{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* animation box */
+
+@keyframes slideUp{
+0%{
+opacity:0;
+transform:translateY(50px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
