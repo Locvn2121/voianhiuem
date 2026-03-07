@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Playfair+Display&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#FFCCFF,#c084fc);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow-x:hidden;
+}
+
+/* container */
+
+.container{
+width:90%;
+max-width:900px;
+background:white;
+border-radius:20px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+position:relative;
+z-index:2;
+animation:fade 1.5s;
+}
+
+/* layout */
+
+.content{
+display:flex;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+/* ảnh */
+
+.photo{
+flex:1;
+text-align:center;
+}
+
+.photo img{
+width:100%;
+max-width:300px;
+border-radius:20px;
+animation:slideLeft 1.5s;
+}
+
+/* chữ */
+
+.text{
+flex:1;
+animation:slideRight 1.5s;
+}
+
+.text h1{
+font-family:'Pacifico',cursive;
+color:#a855f7;
+font-size:32px;
+margin-bottom:10px;
+}
+
+.text p{
+font-size:16px;
+color:#444;
+line-height:1.6;
+}
+
+/* dòng chúc */
+
+.footer{
+margin-top:25px;
+text-align:center;
+font-size:18px;
+font-family:'Playfair Display',serif;
+color:#5b2c6f;
+}
+
+/* ký tự kết */
+
+.end{
+margin-top:10px;
+text-align:center;
+font-size:18px;
+color:#a855f7;
+}
+  
+.title{
+font-size:40px;
+white-space:nowrap;
+text-align:center;
+}
+}
+  .sign{
+margin-top:15px;
+text-align:right;
+font-style:italic;
+color:#555;
+  }
+
+
+
+/* animation */
+
+@keyframes slideLeft{
+from{
+opacity:0;
+transform:translateX(-60px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+@keyframes slideRight{
+from{
+opacity:0;
+transform:translateX(60px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
+
+/* hoa đào */
+
+.petals{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:1;
+}
+
+.petal{
+position:absolute;
+top:-50px;
+font-size:24px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0.7;
+}
+}
+
+.petal:nth-child(1){left:5%;animation-duration:8s}
+.petal:nth-child(2){left:15%;animation-duration:10s}
+.petal:nth-child(3){left:25%;animation-duration:7s}
+.petal:nth-child(4){left:35%;animation-duration:9s}
+.petal:nth-child(5){left:45%;animation-duration:11s}
+.petal:nth-child(6){left:55%;animation-duration:8s}
+.petal:nth-child(7){left:65%;animation-duration:10s}
+.petal:nth-child(8){left:75%;animation-duration:7s}
+.petal:nth-child(9){left:85%;animation-duration:9s}
+.petal:nth-child(10){left:95%;animation-duration:8s}
+
+/* tim click */
+
+.heart{
+position:fixed;
+font-size:20px;
+color:#ff4fd8;
+animation:heartFloat 1.5s linear forwards;
+pointer-events:none;
+}
+
+@keyframes heartFloat{
+0%{
+transform:translateY(0) scale(1);
+opacity:1;
+}
+100%{
+transform:translateY(-120px) scale(1.5);
+opacity:0;
+}
+}
+/* mobile */
+
+@media (max-width:600px){
+
+.content{
+flex-direction:column;
+text-align:center;
+}
+
+.photo img{
+max-width:200px;
+}
+
+.text p{
+font-family:'Poppins', sans-serif;
+font-size:18px;
+line-height:1.6;
+}
+
+.text p{
+font-size:15px;
+}
+
+.footer{
+font-size:16px;
+}
+
+.sign{
+text-align:center;
+}
+
+  }
+</style>
+</head>
+
+<body>
+
+<!-- hoa đào -->
+
+<div class="petals">
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+<div class="petal">🌸</div>
+</div>
+
+<!-- nội dung -->
+
+<div class="container">
+
+<div class="content">
+
+<div class="photo">
+<img src="anh2.png">
+</div>
+
+<div class="text">
+
+<h1 class="title">Gửi đến em</h1>
+
+<p>
+  8/3 rồi nên anh muốn chúc em luôn vui vẻ, cười nhiều và lúc nào cũng hạnh phúc. Cảm ơn em vì đã ở bên anh và làm cho những ngày bình thường của anh trở nên vui hơn. Mong là tụi mình sẽ còn cùng nhau trải qua thật nhiều ngày đặc biệt như thế này.
+  </p>
+
+<div class="end">
+~~
+</div>
+
+  <div class="sign">
+kí tên: người yêu em nhất thế giới
+  </div>
+</div>
+
+<script>
+
+/* click tạo tim */
+
+document.addEventListener("click",function(e){
+
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤";
+
+heart.style.left=e.clientX+"px";
+heart.style.top=e.clientY+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1500);
+
+});
+
+</script>
+
+</body>
+  </html>
